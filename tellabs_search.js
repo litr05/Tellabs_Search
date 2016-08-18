@@ -1,10 +1,12 @@
 function del_canvas() {
     var canv = document.getElementById("canv");
+    var inp = document.getElementById("inp1");
     var elements = document.getElementsByClassName('weathermapimage');
     if (canv != null) elements[0].removeChild(canv);}
 function mbh_node(p1) {
-    if (p1.length>5){ return p1[0]+p1[1]+"-"+p1[2]+p1[3]+p1[4]+p1[5];}
-    else{return p1[0]+p1[1]+"-"+p1[2]+p1[3]+p1[4];}}
+    var p = "";
+    if (p1[6] == "_") {p = p1.substring(0, 6);return p;}
+    else {return p1;}}
 function search_node(node) {
     var map = document.getElementsByTagName('area');
     var node_id = "";
@@ -16,6 +18,13 @@ function search_node(node) {
             break;}}
     if (node_id!=""){return node_id;}
     else {return undefined;}}
+function color_node(node) {
+    var r = 0;var b = 0;var i = 510;
+    var id = setInterval(frame, 0);
+    function frame() {if (i > 510) {i = 0;
+        } else {if (i > 255) {r = 510 - i;b = 255 - r;}
+            else {r = i;b = 255 - r;}
+            i++;node.style.border = '5px solid rgb(' + r + ',' + 0 + ',' + b + ')';}}}
 function my(p1) {
     del_canvas();
     if (p1!=""){
@@ -40,9 +49,10 @@ function my(p1) {
             c.style.width=canvas_width+'px';
             c.style.height=canvas_height+'px';
             var x_point = x1-4;
-            var y_point = (-h-5)+y1;
+            var y_point = (-h-9)+y1;
             c.style.top = y_point+'px';
             c.style.left = x_point +'px';
             window.scrollTo(x1-(document.documentElement.clientWidth/2), y1-(document.documentElement.clientHeight/2));
-        }else{alert("ничего не найдено, скорректируйте запрос\nxxxxx - площадка 5 обязательных цифр")}}
+            color_node(c);
+        }else{alert("ничего не найдено, скорректируйте запрос\nxx-xxx_ - площадка 5 обязательных цифр")}}
     else {alert("введите строку поиска")}}

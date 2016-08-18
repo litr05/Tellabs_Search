@@ -3,13 +3,15 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <script type="text/javascript" src="overlib.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery.maskedinput.min.js"></script>
     <script type="text/javascript" src="tellabs_search.js"></script>
 </head>
 <body>
 
 <form>
-    <input id='inp1' type="text">
-    <input type="button" onclick="my(inp1.value)" value="Click1">
+    <script type="text/javascript">jQuery(function($){$("#inp1").mask("99-999?9");});</script>
+    <input size="3" id='inp1' type="text" onkeydown = "if (event.keyCode == 13){my(this.value); this.value=''; return false;}" autofocus>
 </form>
 
 <div class="weathermapimage" style="margin-left: auto; margin-right: auto; width: 2400px;" >
