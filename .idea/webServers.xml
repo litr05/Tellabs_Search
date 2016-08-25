@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="86ef3094-0779-44fb-afa8-a14ba05e47c6" name="Tellabs2" url="http://10.40.254.159">
+        <fileTransfer host="10.40.254.159" port="22" rootFolder="/var/www/cacti/plugins/weathermap" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="ba1090c5-11cc-465d-ae4b-d425942a3829" name="Tellabs1" url="http://10.40.254.133">
+        <fileTransfer host="10.40.254.133" port="22" rootFolder="/cacti/site/plugins/weathermap" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

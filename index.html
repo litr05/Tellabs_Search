@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<title>xdParser v1.1</title>
+<!--<link href="css/main.css" rel="stylesheet"/>-->
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<!--<script type="text/javascript" src="js/xdFileStorage.js"></script>-->
+<script type="text/javascript" src="js/main.js"></script>
+<style type="text/css">
+	body {
+		background-color:   #E5E5E5;
+	}
+</style>
+</head>
+<body>
+<form name="map">
+	<tr>
+		<select name="id">
+			<option style="font-weight: bold; font-style: italic" value="89131ad69e3b44b5c86e">Weathermaps</option>
+			<option value="49d698c37f856528133d"> - ALN-ING</option>
+			<option selected="" value="89131ad69e3b44b5c86e"> - DAG</option>
+			<option value="63e40c9380f32e296f65"> - KBR</option>
+			<option value="32fbd39a1d41a5c5c3e1"> - KCHR</option>
+			<option value="1096ed3b7566f527ee33"> - RCH</option>
+			<option value="b949e5376e4cee304b0e"> - STV-KLM</option>
+			<option style="font-weight: bold; font-style: italic" value="89131ad69e3b44b5c86e">MAX</option>
+			<option value="04788b47770f722bf3c2"> - ALN-ING</option>
+			<option value="21460964b778d2633bc3"> - STV-KLM</option>
+			<option value="9d23d6920c7c01c5ec05"> - DAG</option>
+			<option value="225046822cf70a24efde"> - RCH</option>
+			<option value="f368cb9005d7ee746f51"> - KLM</option>
+			<option value="7f4365bcc731afaaf81b"> - KBR</option>
+			<option value="6baeab260732989adbf1"> - KCHR</option>
+		</select>
+	</tr>
+	<tr>
+		<input id="starter" type="button" onclick="parserGo()" value="Запустить парсер"/>
+	</tr>
+	<img id="load" src="load.gif" style="display: none" alt="load"/>
+</form>
+	<!--<img id="progress" src="css/images/progress.gif"/>-->
+
+</body>
+</html>
